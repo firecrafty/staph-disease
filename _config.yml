@@ -1,12 +1,11 @@
 # Site settings
 home_slug: staph-disease
-title: Solo, a Jekyll Theme
-tag_text: Solo
+title: Staph Infection
+tag_text: Staph Infection
 description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
 
 # Build settings
 markdown: kramdown
-exclude: ["README.md"]
+exclude: ["Gemfile", "Gemfile.lock", "vendor"]
 sass:
   style: compressed
-exclude: [vendor]
