@@ -1,18 +1,18 @@
 language: ruby
 rvm:
-  - 2.2
+- 2.2
 script:
-  - bundle exec jekyll build
+- bundle exec jekyll build
 after_success:
-  - git clone https://$GITHUB_REPO
-  - cd ${GITHUB_REPO_NAME}
-  - git config user.name "Travis CI"
-  - git config user.email ${EMAIL}
-  - rsync -az --delete --exclude '.git*' ../_site/ .
-  - touch .nojekyll
-  - git add -A .
-  - git commit -m "${COMMIT} - Generated Jekyll site by Travis CI - Build ${TRAVIS_BUILD_NUMBER}"
-  - git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+- git clone https://$GITHUB_REPO
+- cd ${GITHUB_REPO_NAME}
+- git config user.name "Travis CI"
+- git config user.email ${EMAIL}
+- rsync -az --delete --exclude '.git*' ../_site/ .
+- touch .nojekyll
+- git add -A .
+- git commit -m "${COMMIT} - Generated Jekyll site by Travis CI - Build ${TRAVIS_BUILD_NUMBER}"
+- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
 branches:
   only: develop
 env:
@@ -21,5 +21,5 @@ env:
   - GITHUB_REPO: github.com/${TRAVIS_REPO_SLUG}.git
   - GITHUB_REPO_NAME: staph-disease
   - REPO_TARGET_BRANCH: gh-pages
-  - secure: TlnBFWnTSb+n+PytRfeJU9kdQsd2RY7B0pRuIAjt+Q1ghRc3YAPZf0USweMCUu/Sx9R51xt04kR8iUHXgiwdbNZOJaB/RSgZMXt7UJcj5nMmU1Tes5mHkYgJEZZ+YnR+8CLCJnP4qDyEKmQc12epsbG5sawHRrIxLKFAPMKA59RnadcKjUfwhEwfRSZxD6J7106FKAiz1DKGblCjCydR/DZQLfYTBoRgm6orZgG96rrcLYR3lz7gG/15ZA4CPoqqXJDWCbcXN2I2yIzYzn2zf66owku8K+rHjScbmb2yJ3LlTyYWhH3HDKewY6B49nSX5YMUqFl5/H6zWpDQItkkcvSVUnBlkfWFYd7KF4Gek5d1PsqO+HbmCnUk6axD3mYQoRHW6KhPu0Q3aRbpnIkOy0upiayXCUtA7sfF67QyZt8TO/iFyCDY8JyuQPqXmOx/mwyxU2qfpHXfo3IISpiYQIbItE6LaaPI/qoeZbM4vysjwb+ijiez2HdUfCQKrtONKcVaTHfI4QURS1J8rATQF21t9TCaJViAx0o9e6yoOzQX1OUGySRO4L8A1ZSTPcfaPN9VVk7YqfJRQS8zNTWjVRzNiaillCGv8ShPQiv+kB6qU4V7Mi27nvqc5G5Vj1dSNY1zgVRztLpfAish3NsnrgPnEUwsVLkRz3nJiF3jZiQ=
-  - secure: fR9uMbS9fxrO+bMnUvzCtapEvp5OsS4jRo8c7kIOrZ+9n8Jz/S2euxkOhXFaiAvhFVxqccw9pG48ihTuNBvKc/rEU5UsBRNQgyHqWl7nWDvW0+xWyKSB41PnCaB1D+9jgtp+wUKq1Qf4NTNFZBsbbSpOu53qxopqf9L6FUmZcGXhOhzzMvcUJYZAWQ7M4NcFl2YQhRdgP+W1gHTRwa8VG1OL8zZLNdSLVGMbesjJbI+/WAJOsgJvlYtjXJElPp8PgKxaDNkbQcmpPkLXMjSOysLqXTJIX49g0h5n3gbnc96/Knt07O/u8r8rQBY2MdqtuuHuoExmcnnSVkbUwgzTq0qIuuwqcdR5No/Ms1nUhSjChQZ9qQm8VD7OlDHk9J78/hxjW4sp63/v2vEsksegsxIo+N2yL30kOpmBukf6rfjYTW3l6rGepnKy/1Vycj9hbIsmjAAVhEHQZlJ+SKc5TlJGGP5e5yjrYBMQ6j7Ydiw0SdVhD5LQl5kuZuMsQsSKVAWjprZ3SJ4xs73rXUvaq/7R67rntGj5plZeJjPbuOQzfF3L8DCoBUXnZ/1hmJV3C0JSXCMqBzBhcgm89l2tNYLYY7PT7XSOw70/gnG+j0G/xCy/vNu7t57FnRhISF9UxWNIqhxMRiDVzVVpczVeIT+cyHuqSpj/qn4i/hHMTBo=
+  - secure: DwWTptke8I3sVBrKYzXs/6GIZEVPnKfdoW2JdnxuH01j0JMmBOwu14uxOEk1MsiboJIXduJeih5Ysgyi1Ki0fGqWySSi3GXyWvBUTtXVx16t+ZxpAAMo+DSWH8TPvJJWroYmSsxxWkBXRTmjvdgxtGAy1C2RTzZZaZXtArkou+YY6dUw9OTnJZI4SS/lsPDwTjUsSGNI0fVdP97TYYtyKCCvypxJYkRJRne08efa1eiUecFL7fDJ3QdSvKHTPG4wVhknN/hNmB7344YDQWLqcqcbJbGAFdA5zVtzvzCOt9MY+MjDEpWAH3pTjJky1iHvQDnc2gpNKyZxKngvfqal626t2TGvSm6E1q5e2oMrMWK1XXlEuvAwO5AyAhm+JN4iTMK8QItV5RjYUWItlG4QCMVEOvS+FBJOmdULYI3wGdEK9CXdP6pEKrRYU2/rhozyVyKo70wLQW4mmPdaxvVqQqO2MHXCwhoiDHFDAl74f/OHm6AIjqRnJfZqSYzglGBIqSe8quPVIZMRIE8VxIh2wVPIx1cN2mqi+bQoOpqpCiKG+b6LO9WmF/I3XnO1SL8xNDj9qCZgz4pBif6tx7UXKepve8er09OHo1F49btsfSAZhXmmSr0zkNI8h5OVQuIXpeHd5EqgwphD2DMpUVSstzSo494pJ4NzFc3aikVPr7k=
+  - secure: UodUyUMCLg+/zFGtg7CxnrYHUjsYQ22ahQ/nL+xLRA5qQtraffke6xbh3Lbrl0JIVNqXLEW2vxhgg6NGQOQUBkLrt6UyokJrxpw+0vRBEK9MaVUg/gXNIsZls3bS32y5FEoq8bdU6ss9lMjYN38ZuSG4vgZ6uVzhaYGoIm+8kBGv6hQvQL/wpVWmhXIK4WUegwqQ53mfv7w085qYf5gCnt2FQYjSKBwmo/dtGqzNYDqwRbHI+pHL3wCRrOHZh3yKOC1UK1aV84C7rkP4dirQEZTlAC0uX0TnM9FSPR0oiskoa9gswuH2AimchnRZGTfqV/S8r2eMVet5i71okNCduWZGwe8AvGfNy/yWKop+GB00lrCP2tgb6U8yNWIaXKNwPRzI/zwIZ9755or8vHt1NzF/sIWe8kZDuhdVWDxNGuqsvViiDse3jL5UNYZZy9mJg7vGFvY4+btSsHhiTYvMYdef19KikhIjWHE/Tf5UXBJkxOQEZdiTzQlLQSI2LCeE5E51rvq7jzkBJkmgcmQgyDPDK5bJ618uk1NPsuaOu7N1Ui2jM6rohqWax889xwTCJbMyvXdsXrbnur0A/DJ+Zs3kL86FwNy4Ppj3WTC79o9GqRGrQXACMJ36vNIzzoPOU6bwpXPylj5AW41/AaV7m/KKcwH25lt5z3Jw7aRAlOA=
