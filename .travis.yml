@@ -13,8 +13,7 @@ after_success:
 - git add -A .
 - git commit -m "Commit ${TRAVIS_COMMIT} - Generated Jekyll site by Travis CI - Build
   ${TRAVIS_BUILD_NUMBER}"
-- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
-  --quiet
+- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH} --quiet
 branches:
   only: develop
 env:
