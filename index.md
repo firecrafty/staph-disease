@@ -67,3 +67,6 @@ Symptoms of a bloodstream infection:
 * [https://microbewiki.kenyon.edu/index.php/Staphylococcus_aureus](https://microbewiki.kenyon.edu/index.php/Staphylococcus_aureus)
 * [http://www.merckmanuals.com/home/infections/bacterial-infections/staphylococcus-aureus-infections](http://www.merckmanuals.com/home/infections/bacterial-infections/staphylococcus-aureus-infections)
 * [http://www.health.state.mn.us/divs/idepc/diseases/staph/basics.html](http://www.health.state.mn.us/divs/idepc/diseases/staph/basics.html)
+
+
+[Download .docx Version](downloads/resume.docx)
