@@ -6,6 +6,6 @@ description: Staphylococcus Aureus - Pathogens and Human Disease Project for Hon
 
 # Build settings
 markdown: kramdown
-exclude: ["Gemfile", "Gemfile.lock", "vendor"]
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "vendor"]
 sass:
   style: compressed
