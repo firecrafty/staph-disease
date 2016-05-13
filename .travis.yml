@@ -5,7 +5,7 @@ script:
   - bundle exec jekyll build
 after_success:
   - git clone https://$GITHUB_REPO
-  - cd $(basename ${GITHUB_REPO%.git})
+  - cd ${GITHUB_REPO_NAME}
   - git config user.name "Travis CI"
   - git config user.email ${EMAIL}
   - rsync -az --delete --exclude '.git*' ../_site/ .
@@ -19,6 +19,7 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GITHUB_REPO: github.com/${TRAVIS_REPO_SLUG}.git
+  - GITHUB_REPO_NAME: staph-disease
   - REPO_TARGET_BRANCH: gh-pages
   - secure: TlnBFWnTSb+n+PytRfeJU9kdQsd2RY7B0pRuIAjt+Q1ghRc3YAPZf0USweMCUu/Sx9R51xt04kR8iUHXgiwdbNZOJaB/RSgZMXt7UJcj5nMmU1Tes5mHkYgJEZZ+YnR+8CLCJnP4qDyEKmQc12epsbG5sawHRrIxLKFAPMKA59RnadcKjUfwhEwfRSZxD6J7106FKAiz1DKGblCjCydR/DZQLfYTBoRgm6orZgG96rrcLYR3lz7gG/15ZA4CPoqqXJDWCbcXN2I2yIzYzn2zf66owku8K+rHjScbmb2yJ3LlTyYWhH3HDKewY6B49nSX5YMUqFl5/H6zWpDQItkkcvSVUnBlkfWFYd7KF4Gek5d1PsqO+HbmCnUk6axD3mYQoRHW6KhPu0Q3aRbpnIkOy0upiayXCUtA7sfF67QyZt8TO/iFyCDY8JyuQPqXmOx/mwyxU2qfpHXfo3IISpiYQIbItE6LaaPI/qoeZbM4vysjwb+ijiez2HdUfCQKrtONKcVaTHfI4QURS1J8rATQF21t9TCaJViAx0o9e6yoOzQX1OUGySRO4L8A1ZSTPcfaPN9VVk7YqfJRQS8zNTWjVRzNiaillCGv8ShPQiv+kB6qU4V7Mi27nvqc5G5Vj1dSNY1zgVRztLpfAish3NsnrgPnEUwsVLkRz3nJiF3jZiQ=
   - secure: fR9uMbS9fxrO+bMnUvzCtapEvp5OsS4jRo8c7kIOrZ+9n8Jz/S2euxkOhXFaiAvhFVxqccw9pG48ihTuNBvKc/rEU5UsBRNQgyHqWl7nWDvW0+xWyKSB41PnCaB1D+9jgtp+wUKq1Qf4NTNFZBsbbSpOu53qxopqf9L6FUmZcGXhOhzzMvcUJYZAWQ7M4NcFl2YQhRdgP+W1gHTRwa8VG1OL8zZLNdSLVGMbesjJbI+/WAJOsgJvlYtjXJElPp8PgKxaDNkbQcmpPkLXMjSOysLqXTJIX49g0h5n3gbnc96/Knt07O/u8r8rQBY2MdqtuuHuoExmcnnSVkbUwgzTq0qIuuwqcdR5No/Ms1nUhSjChQZ9qQm8VD7OlDHk9J78/hxjW4sp63/v2vEsksegsxIo+N2yL30kOpmBukf6rfjYTW3l6rGepnKy/1Vycj9hbIsmjAAVhEHQZlJ+SKc5TlJGGP5e5yjrYBMQ6j7Ydiw0SdVhD5LQl5kuZuMsQsSKVAWjprZ3SJ4xs73rXUvaq/7R67rntGj5plZeJjPbuOQzfF3L8DCoBUXnZ/1hmJV3C0JSXCMqBzBhcgm89l2tNYLYY7PT7XSOw70/gnG+j0G/xCy/vNu7t57FnRhISF9UxWNIqhxMRiDVzVVpczVeIT+cyHuqSpj/qn4i/hHMTBo=
