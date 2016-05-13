@@ -31,6 +31,8 @@ Pathogens and Human Disease Project - Ryan Blue
 
 
 ##<a name="spread"/>Spread & Movement
+* Direct contact with infected person
+* Contaminated hands
 
 ##<a name="symptoms"/>Symptoms
 Symptoms of a localized infection include:
@@ -42,6 +44,18 @@ Symptoms of a localized infection include:
 * Tenderness
 * Pain
 
+Symptoms of a bloodstream infection:
+
+* Difficulty breathing
+* General discomfort
+* Fever
+* Chills
+
+###Prognosis
+* Some people will never get an infection even though they are colonized with *S. Aureus*
+* Most skin infections will heal without medical treatment
+* Most will heal within a few weeks
+
 ##<a name="facts"/>Fun Facts
 * Colonies formed are yellow, leading to the name *Aureus*, Latin for gold
 * Can cause disease directly because of bacteria itself or as a result of toxins made by the bacteria
@@ -51,3 +65,5 @@ Symptoms of a localized infection include:
 * [http://www.medicinenet.com/staph_infection/article.htm](http://www.medicinenet.com/staph_infection/article.htm)
 * [https://www.niaid.nih.gov/topics/antimicrobialresistance/examples/mrsa/Pages/history.aspx](https://www.niaid.nih.gov/topics/antimicrobialresistance/examples/mrsa/Pages/history.aspx)
 * [https://microbewiki.kenyon.edu/index.php/Staphylococcus_aureus](https://microbewiki.kenyon.edu/index.php/Staphylococcus_aureus)
+* [http://www.merckmanuals.com/home/infections/bacterial-infections/staphylococcus-aureus-infections](http://www.merckmanuals.com/home/infections/bacterial-infections/staphylococcus-aureus-infections)
+* [http://www.health.state.mn.us/divs/idepc/diseases/staph/basics.html](http://www.health.state.mn.us/divs/idepc/diseases/staph/basics.html)
