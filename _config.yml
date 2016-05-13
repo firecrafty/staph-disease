@@ -9,3 +9,4 @@ markdown: kramdown
 exclude: ["README.md"]
 sass:
   style: compressed
+exclude: [vendor]
